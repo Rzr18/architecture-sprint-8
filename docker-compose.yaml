@@ -31,7 +31,7 @@ services:
       - keycloak_db
   backend:
     build:
-      context: ./backend/ReportWebApi
+      context: ./backend/ReportsApi
       dockerfile: Dockerfile
     ports:
       - "8000:8080"
