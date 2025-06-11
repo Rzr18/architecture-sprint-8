@@ -9,7 +9,7 @@ public class Startup
 {
     private readonly AuthPolicyRoles _authPolicy = new()
     {
-        Name = "ProtheticsOnly",
+        Name = "ProtheticOnly",
         Roles = ["prothetic_user"]
     };
 
