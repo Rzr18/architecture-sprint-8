@@ -29,6 +29,16 @@ services:
       - "8080:8080"
     depends_on:
       - keycloak_db
+  backend:
+    build:
+      context: ./backend/ReportsApi
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8080"
+    depends_on:
+      - keycloak
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
   frontend:
     build:
       context: ./frontend
